@@ -23,6 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'rails_admin'
+# Flexible authentication solution for Rails with Warden
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
