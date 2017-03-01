@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'rails_admin'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
+gem 'cancancan'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
