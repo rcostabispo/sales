@@ -1,5 +1,13 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Representantes Comerciais", ""]
+
+  config.navigation_static_links = {
+    "OneBitCode" => 'http://onebitcode.com'
+  }
+
+  config.navigation_static_label = "Links Úteis"
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -24,17 +32,18 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.model Product do
+    navigation_icon 'fa fa-product-hunt'
     create do
       field  :name
       field  :description
       field  :status
       field  :price
       field  :photo
-
     end
   end
 
   config.model Sale do
+    navigation_icon 'fa fa-money'
     create do
       field  :client
       field  :sale_date
@@ -65,6 +74,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Client do
+    navigation_icon 'fa fa-user-o'
     create do
       field  :name
       field  :company_name
@@ -107,6 +117,24 @@ RailsAdmin.config do |config|
       field  :status
       field  :address
     end
+  end
+
+  config.model Discount do
+    parent Product
+  end
+
+  config.model Sale do
+    parent User
+    weight -2
+  end
+
+  config.model Comission do
+    parent User
+    weight -1
+  end
+
+  config.model Client do
+    parent User
   end
 
   config.model ProductQuantity do
