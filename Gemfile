@@ -27,6 +27,9 @@ gem 'rails_admin'
 gem 'devise'
 gem 'cancancan'
 
+# Rails_Admin FLAT theme overhaul
+gem 'rails_admin_rollincode', '~> 1.0'
+
 # Upload files
 gem 'carrierwave'
 
